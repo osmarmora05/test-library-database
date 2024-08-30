@@ -1,0 +1,15 @@
+{
+  "name": "test-library-databases-supabase",
+  "version": "0.0.1",
+  "description": "abduzcan",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.2"
+  }
+}
