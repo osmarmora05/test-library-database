@@ -16,7 +16,7 @@ export class Supabse extends Database {
   constructor(dbUrl = "", dbKey = "") {
     this.#dbUrl = dbUrl;
     this.#dbKey = dbKey;
-    this.#clientDb = connect(this.#dbUrl, this.#dbKey);
+    this.#clientDb = this.#connect(this.#dbUrl, this.#dbKey);
   }
 
   #applyCondition(query, conditionType, conditionField, conditionValue) {
@@ -62,7 +62,7 @@ export class Supabse extends Database {
         throw new Error(`Condition type not supported: ${conditionType}`);
     }
   }
-  connect(dbUrl = "", dbKey = "") {
+  #connect(dbUrl = "", dbKey = "") {
     const supabase = createClient(dbKey, dbUrl);
     return supabase;
   }
